@@ -24,16 +24,16 @@
 				<div class="col-md-6 col-lg-4">
 					<div class="login-wrap p-0">
 		      	<h3 class="mb-4 text-center">Já tem uma conta?</h3>
-		      	<form action="#" class="signin-form">
+		      	<form class="signin-form">
 		      		<div class="form-group">
 		      			<input id="inpUsuario" type="text" class="form-control" placeholder="Usuário" required>
 		      		</div>
 	            <div class="form-group">
 	              <input id="inpSenha" type="password" class="form-control" placeholder="Senha" required>
-	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+	              <span toggle="#inpSenha" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 	            </div>
 	            <div class="form-group">
-	            	<button type="submit" class="form-control btn btn-primary submit px-3">Entrar</button>
+	            	<button id="btEntrar" type="submit" class="form-control btn btn-primary submit px-3">Entrar</button>
 	            </div>
 	            <div class="form-group d-md-flex">
 	            	<div class="w-50">
@@ -50,8 +50,8 @@
 	          <p class="w-100 text-center">&mdash; Não tenho uma conta &mdash;</p>
 	          <div class="social d-flex text-center">
 				<button id="btFiliar" type="submit" class="form-control btn btn-primary filiar px-3">Filiar-se a um nutricionista</button>
-				<button id="btHelp" type="submit" class="form-control btn btn-primary submit px-3">Como entrar</button>
-				<button id="btAbrirCadastrar" type="submit" class="form-control btn btn-primary submit px-3" data-toggle="modal" data-target="#modalCadastro">Cadastrar (dev only)</button>
+				<button id="btHelp" type="submit" class="form-control btn btn-primary help px-3">Como entrar</button>
+				<button id="btAbrirCadastrar" type="submit" class="form-control btn btn-primary cadastro px-3" data-toggle="modal" data-target="#modalCadastro">Cadastrar (dev only)</button>
 	          </div>
 		      </div>
 				</div>
@@ -59,7 +59,8 @@
 		</div>
 	</section>
 
-	<div class="modal fade" id="modalCadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	
+	<div class="modal fade" id="modalCadastro" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -69,13 +70,51 @@
 					</button>
 				</div>
 				<div class="modal-body">
-				  ...
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-md-6 col-lg-12">
+								<div class="login-wrap p-0">
+							  		<form class="signin-form">
+										<div class="form-group">
+											<input id="p_nome" type="text" class="form-control" placeholder="Primeiro Nome" required>
+										</div>
+										<div class="form-group">
+											<input id="u_nome" type="text" class="form-control" placeholder="Último Nome" required>
+										</div>
+										<div class="form-group">
+											<input id="email" type="email" class="form-control" placeholder="E-mail" required>
+										</div>
+										<div class="form-group">
+											<input id="celular" type="tel" class="form-control" placeholder="Número celular" required>
+										</div>
+										<div class="form-group">
+											<input id="cpf" type="number" class="form-control" placeholder="CPF" required>
+										</div>
+										<div class="form-group">
+									  		<input id="nascimento" type="date" class="form-control" placeholder="Nascimento" required>
+								  		</div>
+										<div class="form-group">
+											<input id="usuario" type="text" class="form-control" placeholder="Usuário" required>
+										</div>
+										<div class="form-group">
+							  				<input id="senha" type="password" class="form-control" placeholder="Senha" required>
+							  				<span toggle="#senha" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+										</div>
+										<div class="form-group">
+											<input id="confSenha" type="password" class="form-control" placeholder="Confirme sua senha" required>
+											<span toggle="#confSenha" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+									  	</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-					<button id="btFinalizarCadastro" type="button" class="btn btn-primary">Cadastrar</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+					<button id="btFinalizarCadastro" type="submit" class="btn btn-primary submit px-3">Enviar</button>
 				</div>
-		  	</div>
+			</div>
 		</div>
 	</div>
 	

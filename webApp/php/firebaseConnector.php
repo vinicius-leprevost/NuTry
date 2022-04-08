@@ -3,7 +3,13 @@ require __DIR__.'/../../vendor/autoload.php';
 date_default_timezone_set("America/Sao_Paulo");
 
 use Kreait\Firebase\Factory;
-$factory = (new Factory())->withDatabaseUri('https://nutry-41304-default-rtdb.firebaseio.com/'); //caminho banco de dados
+use Kreait\Firebase\ServiceAccount;
+
+$factory = (new Factory())
+                    ->withServiceAccount(__DIR__."/nutry-firebaseKey.json")
+                    ->withDatabaseUri('https://nutry-41304-default-rtdb.firebaseio.com/'); //caminho banco de dados
+
+
 $rcon = $factory->createDatabase();
 
 
