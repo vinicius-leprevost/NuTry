@@ -1,0 +1,6 @@
+Como integrar firebase + php:
+https://www.youtube.com/watch?v=06MF8VTQ9l4
+
+Instalar composer:
+https://www.youtube.com/watch?v=OrZycMLixZo
+-> Habilitar extensão sodium em "xampp/php/php.ini"
