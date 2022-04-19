@@ -10,7 +10,7 @@ $email = $_POST["ajax_email"];
 $celular = $_POST["ajax_celular"];
 $cpf = $_POST["ajax_cpf"];
 $dataNascimento = $_POST["ajax_dataNascimento"];
-$senha = $_POST["ajax_senha"];
+$senha = md5($_POST["ajax_senha"]);
 
 
 $propriedades_cadastro = [
@@ -28,7 +28,7 @@ $criarUsuario = $auth->createUser($propriedades_cadastro);
 
 
 
-
+/*
 $dados_cadastro = [
     "Data_Nascimento" => $dataNascimento,
     "Cpf" => $cpf,
@@ -40,7 +40,7 @@ $dados_cadastro = [
 $uid = $auth->getUserByEmail($email);
 print_r($uid);
 
-/*
+
 
 $updates = [
     "Contas/".$auth()->uid => $novoUsuario,

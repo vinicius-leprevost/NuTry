@@ -4,6 +4,7 @@ date_default_timezone_set("America/Sao_Paulo");
 
 use Kreait\Firebase\Factory;
 use Kreait\Firebase\ServiceAccount;
+use Kreait\firebase\Auth;
 
 $factory = (new Factory())
                     ->withServiceAccount(__DIR__."/nutry-firebaseKey.json")
@@ -11,7 +12,7 @@ $factory = (new Factory())
 
 
 $rcon = $factory->createDatabase();
-
+$auth = $factory->createAuth();
 
 /*   
 
