@@ -1,6 +1,8 @@
 <?php
 require __DIR__.'/../../vendor/autoload.php';
 date_default_timezone_set("America/Sao_Paulo");
+$a = new DateTime();
+$dataAtual = $a->format("d-m-Y h:i:s a");
 
 use Kreait\Firebase\Factory;
 use Kreait\Firebase\ServiceAccount;
@@ -19,7 +21,7 @@ $auth = $factory->createAuth();
 <<< ADICIONE AQUI TODOS OS ATRIBUTOS UTILIZADOS NO BANCO DE DADOS >>>
 
 Contas ->
-    Referência ->
+    Referência -> (uid)
         $id
         $primeiro_nome
         $ultimo_nome

@@ -1,10 +1,11 @@
 $(document).ready(function(){
-    $('#modalCadastro').modal('show');
-    
-    $("#btEntrar").click(function(){
-        usuario=$("#email").val();
-        senha=$("#senha").val();
-        fLocalEntrar(usuario, senha);
+
+    $("#btEntrar").click(function(e){
+        e.preventDefault();
+        email=$("#loginEmail").val();
+        senha=$("#loginSenha").val();
+        fLocalEntrar(email, senha);
+        
     });
     $("#btFiliar").click(function(){
         fLocalFiliar();
@@ -13,7 +14,6 @@ $(document).ready(function(){
         fLocalHelp();
     });
     $("#btFinalizarCadastro").click(function(){
-    
         primeiroNome=$("#p_nome").val();
         ultimoNome=$("#u_nome").val();
         email=$("#email").val();
@@ -36,8 +36,20 @@ $(document).ready(function(){
 });
 
 
-function fLocalEntrar(usuario, senha){
-
+function fLocalEntrar(email, senha){
+    $.ajax({
+        data:{
+            ajax_email: email,
+            ajax_senha: senha,
+        },
+        type:"POST",
+        url:"php/loginUsuario.php",
+        success: function(err){
+            console.log(err);
+            alert("Logado!");
+            return true;
+        },
+    });
 }
 function fLocalFiliar(){
     
@@ -59,10 +71,9 @@ function fLocalCadastrar(primeiroNome,ultimoNome,email,celular,cpf,dataNasciment
        type:"POST",
        url:"php/cadastroUsuario.php",
        success: function(){
-            alert("Cadastrado com sucesso!")
+            alert("Cadastrado com sucesso!");
             return true;
        }
-
     });
 
 
