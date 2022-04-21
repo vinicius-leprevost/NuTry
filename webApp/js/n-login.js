@@ -14,6 +14,7 @@ $(document).ready(function(){
         fLocalHelp();
     });
     $("#btFinalizarCadastro").click(function(){
+        
         primeiroNome=$("#p_nome").val();
         ultimoNome=$("#u_nome").val();
         email=$("#email").val();
@@ -23,11 +24,14 @@ $(document).ready(function(){
         senha=$("#senha").val();
         confSenha=$("#confSenha").val();
 
-        if(senha == confSenha){
+        if(primeiroNome == "" || ultimoNome == "" || email == "" || celular == "" || 
+            cpf == "" || dataNascimento == "" || senha == "" || confSenha == ""){
+                window.alert("Preencha todos os campos");
+        } else if(senha == confSenha){
             fLocalCadastrar(primeiroNome,ultimoNome,email,celular,cpf,dataNascimento,senha);
             if(fLocalCadastrar){
                 $('#modalCadastro').modal('hide');
-            }
+            } 
         }else{
             window.alert("Erro: As senhas não coincidem");
         }
@@ -43,11 +47,20 @@ function fLocalEntrar(email, senha){
             ajax_senha: senha,
         },
         type:"POST",
+        dataType:"json",
         url:"php/loginUsuario.php",
-        success: function(err){
-            console.log(err);
-            alert("Logado!");
-            return true;
+        error:function(){ 
+            alert("NÃO ESTÁ HAVENDO RETORNO DO PHP !!!");
+        }, 
+        success: function(retorno){
+            console.log(retorno);
+            if(retorno['autenticado']){
+                alert("USUÁRIO AUTENTICADO");
+                window.location.href="paginas/index.html";
+    
+            }else{            
+                alert("Aqui Email ou senha incorretos, tente novamente");
+            }
         },
     });
 }
