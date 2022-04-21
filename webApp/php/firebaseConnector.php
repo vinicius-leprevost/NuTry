@@ -7,7 +7,7 @@ $dataAtual = $a->format("d-m-Y h:i:s a");
 use Kreait\Firebase\Factory;
 use Kreait\Firebase\ServiceAccount;
 use Kreait\firebase\Auth;
-
+//Firebase Route
 $factory = (new Factory())
                     ->withServiceAccount(__DIR__."/nutry-firebaseKey.json")
                     ->withDatabaseUri('https://nutry-41304-default-rtdb.firebaseio.com/'); //caminho banco de dados
