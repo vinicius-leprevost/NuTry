@@ -28,11 +28,11 @@ $dados_cadastro = [ // CADASTRO PARA REALTIME
     'Display_Name' => $pNome." ".$uNome,
 ];
 
-// PEGAR UID
-$uid = $auth->getUserByEmail($email)->uid;
-
 // CADASTRO EM "AUTHENTICATION"
 $criarUsuario = $auth->createUser($propriedades_cadastro);
+
+// PEGAR UID
+$uid = $auth->getUserByEmail($email)->uid;
 
 // CADASTRO EM REALTIME "CONTAS"
 $updates = [
