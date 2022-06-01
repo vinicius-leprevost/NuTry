@@ -20,6 +20,7 @@ $propriedades_cadastro = [ // CADASTRO PADRÃO FIREBASE
     'photoUrl' => '',
     'disabled' => false,
 ];
+
 $dados_cadastro = [ // CADASTRO PARA REALTIME
     "Data_Nascimento" => $dataNascimento,
     "Cpf" => $cpf,

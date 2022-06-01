@@ -1,9 +1,9 @@
 $(document).ready(function(){
     $("#btCadastrar").click(function(){
-        var nome = $("#inpNome").value();
-        var sobrenome = $("#inpSobrenome").value();
-        var email = $("#inpEmail").value();
-        fLocalCadastrar(nome,sobrenome,email);
+        var nome = $("#inpNome").val();
+        var sobrenome = $("#inpSobrenome").val();
+        var email = $("#inpEmail").val();
+        fLocalCadastrara(nome,sobrenome,email);
     });
     $("#btCancelar").click(function(){
 
@@ -11,7 +11,7 @@ $(document).ready(function(){
 });
 
 
-function fLocalCadastrar(nome,sobrenome,email){
+function fLocalCadastrara(nome,sobrenome,email){
     $.ajax({
         data:{
              ajax_nome: nome,
@@ -19,7 +19,7 @@ function fLocalCadastrar(nome,sobrenome,email){
              ajax_email: email,
         },
         type:"POST",
-        url:"php/cadastroPaciente.php",
+        url:"../php/cadastroPaciente.php",
         success: function(){
              alert("E-mail enviado com sucesso!");
              return true;
