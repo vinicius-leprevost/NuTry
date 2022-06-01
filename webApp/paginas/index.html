@@ -1,126 +1,146 @@
-<!doctype html>
-<html lang="en">
+  <!DOCTYPE html>
+  <html lang="pt-br">
   <head>
-  	<title>NuTry</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-  <link rel="stylesheet" href="../css/style-sidebar.css">
-  
-  <script type="text/javascript" src="../js/n-sidebar.js"></script>
-  <script type="text/javascript" src="../jQuery/biblioteca.js"></script>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Box Icons -->
+      <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+      <!-- Google Fonts -->
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="../css/style-sidebar.css">
+
+      <script type="text/javascript" src="../jQuery/biblioteca.js"></script>
+      <!-- js aqui -->
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+      <title>NuTry</title>
+</head>
+<body>
     
-	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  -->
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <div class="sidebar">
+        <div class="logoContent">
+            <div class="logo">
+                <i class='bx bxl-nodejs'></i>
+                <div class="logoName">NuTry</div>
+            </div>
+            <!-- logo -->
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <!-- logoContent -->
+        <ul class="nav_list">
 
-  
-	</head>
+            <li>
+                <i class='bx bx-search' ></i>
+                <input type="search" name="search" placeholder="Procurar...">
+                <span class="toolipe">Procurar</span>
+            </li>
 
-    <body>
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt' ></i>
+                    <span class="links_name">Dashboard</span>
+                    <span class="toolipe">Dashboard</span>
+                </a>
+            </li>
 
-      <div id="wrapper">
-        <div class="overlay"></div>
-    
-        <!-- Sidebar -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
-            <ul class="nav sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                       NuTry
-                    </a>
-                </li>
-                <li>
-                    <a href="#">Início</a>
-                </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cards <span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li class="dropdown-header">..:: CARDS ::..</li>
-                    <li><a href="#">Geral</a></li>
-                    <li><a href="#">Dietas</a></li>
-                    <li><a href="#">Avaliações Físicas</a></li>
-                    <li><a href="#">Refeições</a></li>
-                  </ul>
-                </li>
-                <li>
-                    <a href="#">Configurações</a>
-                </li>
-                <li>
-                    <a href="#">Minha Contas</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- /#sidebar-wrapper -->
+            
 
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <button type="button" class="hamburger is-" data-toggle="offcanvas">
-                <span class="hamb-top"></span>
-    			<span class="hamb-middle"></span>
-				<span class="hamb-bottom"></span>
-            </button>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                      <table width="140%" colspan>
-                        <tr>
-                          <td >
-                            <div class="card" style="width: 18rem;">
-                              <img class="card-img-top" src="../images/Cards/card1.jpg" alt="Card image cap">
-                              <div class="card-body">
-                                <h5 class="card-title">Título</h5>
-                                <p class="card-text">Descrição do card.</p>
-                                <a href="#" class="btn btn-primary">Ver mais</a>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="card" style="width: 18rem;">
-                              <img class="card-img-top" src="../images/Cards/card1.jpg" alt="Card image cap">
-                              <div class="card-body">
-                                <h5 class="card-title">Título</h5>
-                                <p class="card-text">Descrição do card.</p>
-                                <a href="#" class="btn btn-primary">Ver mais</a>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <div class="card" style="width: 18rem;">
-                              <img class="card-img-top" src="../images/Cards/card1.jpg" alt="Card image cap">
-                              <div class="card-body">
-                                <h5 class="card-title">Título</h5>
-                                <p class="card-text">Descrição do card.</p>
-                                <a href="#" class="btn btn-primary">Ver mais</a>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                      </table>    
-                    
-                    
+            <li>
+                <a href="#">
+                    <i class='bx bx-user' ></i>
+                    <span class="links_name">Usuário</span>
+                    <span class="toolipe">Usuário</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog' ></i>
+                    <span class="links_name">Configurações</span>
+                    <span class="toolipe">Configurações</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-folder-open' ></i>
+                    <span class="links_name">Dietas</span>
+                    <span class="toolipe">Dietas</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-chat' ></i>
+                    <span class="links_name">Cards</span>
+                    <span class="toolipe">Cards</span>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-bar-chart' ></i>
+                    <span class="links_name">Relatórios</span>
+                    <span class="toolipe">Relatórios</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-cart-alt' ></i>
+                    <span class="links_name">Consultas</span>
+                    <span class="toolipe">Consultas</span>
+                </a>
+            </li>
+        </ul>
+        <!-- nav_list -->
+        <div class="profileContent">
+            <div class="profile">
+                <div class="profileDetail">
+                    <img src="C:\xampp\htdocs\NuTry\webApp\images\Nutry.png">
+                    <div class="name_job">
+                        <div class="name">Nome(Nutricionista)</div>
+                        <div class="job">Nutricionista</div>
                     </div>
                 </div>
+                <!-- profileDetail -->
+                <i class='bx bx-log-out' id="logout" ></i>
             </div>
+            <!-- profile -->
         </div>
-        <!-- /#page-content-wrapper -->
+        <!-- profileContent -->
+    </div>
+    <!-- sidebar -->
 
+    <div class="homeContent">
+        <h2>Home</h2>
     </div>
 
+    <script>
+        // variáveis
+        const btn = document.querySelector('#btn');
+        const bxSearch = document.querySelector('.bx-search');
+        const sidebar = document.querySelector('.sidebar');
+        const home = document.querySelector('.homeContent');
 
+        // Eventos de escuta do click
+        btn.addEventListener('click',()=>{
+            sidebar.classList.toggle('active');
+            home.classList.toggle('active');
+        });
 
-
-
-
-
-
-
-
-
-    </body>
+        bxSearch.addEventListener('click',()=>{
+            sidebar.classList.toggle('active');
+            home.classList.toggle('active');
+        });
+    </script>
+</body>
 </html>
