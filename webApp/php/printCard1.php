@@ -1,7 +1,7 @@
 <?php
 include "firebaseConnector.php";
 
-$red="Refeicao/0123456789/1234"
+$ref="Refeicao/0123456789/1234"
 $fetchdata = $database->getReference($ref)->getValue();
 
 foreach($fetchdata as $key => $dados){

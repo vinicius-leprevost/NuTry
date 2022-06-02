@@ -16,7 +16,6 @@ $factory = (new Factory())
 $rcon = $factory->createDatabase();
 $auth = $factory->createAuth();
 
-$database = $firebase->getDataBase();
 /*   
 
 <<< ADICIONE AQUI TODOS OS ATRIBUTOS UTILIZADOS NO BANCO DE DADOS >>>
