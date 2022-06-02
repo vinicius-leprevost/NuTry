@@ -41,7 +41,7 @@
 
             <li>
                 <a href="#">
-                    <i class='bx bx-grid-alt' ></i>
+                    <i class='bx bx-grid-alt' style='color:#094a15'></i>
                     <span class="links_name">Dashboard</span>
                     <span class="toolipe">Dashboard</span>
                 </a>
@@ -51,7 +51,7 @@
 
             <li>
                 <a href="#">
-                    <i class='bx bx-user' ></i>
+                    <i class='bx bx-user' style='color:#094a15'></i>
                     <span class="links_name">Usuário</span>
                     <span class="toolipe">Usuário</span>
                 </a>
@@ -59,7 +59,7 @@
 
             <li>
                 <a href="#">
-                    <i class='bx bx-cog' ></i>
+                    <i class='bx bx-cog' style='color:#094a15'></i>
                     <span class="links_name">Configurações</span>
                     <span class="toolipe">Configurações</span>
                 </a>
@@ -67,7 +67,7 @@
 
             <li>
                 <a href="#">
-                    <i class='bx bx-folder-open' ></i>
+                    <i class='bx bx-folder-open' style='color:#094a15'></i>
                     <span class="links_name">Arquivos</span>
                     <span class="toolipe">Arquivos</span>
                 </a>
@@ -75,16 +75,16 @@
 
             <li>
                 <a href="#">
-                    <i class='bx bx-chat' ></i>
-                    <span class="links_name">Mensagens</span>
-                    <span class="toolipe">Mensagens</span>
+                    <i class='bx bx-chat' style='color:#094a15'></i>
+                    <span class="links_name">Comentarios Salvos</span>
+                    <span class="toolipe">Comentarios Salvos</span>
                 </a>
             </li>
 
 
             <li>
                 <a href="#">
-                    <i class='bx bx-bar-chart' ></i>
+                    <i class='bx bx-bar-chart' style='color:#094a15'></i>
                     <span class="links_name">Relatórios</span>
                     <span class="toolipe">Relatórios</span>
                 </a>
@@ -92,9 +92,17 @@
 
             <li>
                 <a href="#">
-                    <i class='bx bx-cart-alt' ></i>
-                    <span class="links_name">Vendas</span>
-                    <span class="toolipe">Vendas</span>
+                    <i class='bx bx-cart-alt' style='color:#094a15' ></i>
+                    <span class="links_name">Planos</span>
+                    <span class="toolipe">Planos</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bxs-user-plus' style='color:#27c040'  ></i>
+                    <span class="links_name">Adicionar Paciente</span>
+                    <span class="toolipe">Adicionar Paciente</span>
                 </a>
             </li>
         </ul>
@@ -102,7 +110,7 @@
         <div class="profileContent">
             <div class="profile">
                 <div class="profileDetail">
-                    <img src="./img/brunosalmito.png">
+                    <img src="">
                     <div class="name_job">
                         <div class="name">Nutricionista</div>
                         <div class="job">Web Developer</div>
@@ -118,8 +126,46 @@
     <!-- sidebar -->
 
     <div class="homeContent">
-        <h2>Home</h2>
+        <h2>home</h2>
     </div>
+
+
+<div class="container">
+  <div class="row">
+    
+    <div class="col-6">
+      <div class="card">
+        <div class="card-body">
+          <h1>Cadastro Paciente</h1>
+          <form id="form-contato">
+            <div class="form-group">
+              <label for="nome">Nome:</label>
+              <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite o seu nome...">
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail:</label>
+              <input class="form-control" type="email" name="email" id="email" placeholder="Digite o seu e-mail...">
+            </div>
+            <div class="form-group">
+              <label for="sobrenome">Sobrenome:</label>
+              <input class="form-control" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome...">
+            </div>
+            <div class="form-group text-center">
+              <button type="submit" class="btn btn-primary">ENVIAR</button>
+            </div>
+            <div class="alert alert-danger d-none">
+              Preencha o campo <span id="campo-erro"></span>!
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>  
+</body>
+</html>
 
     <script>
         // variáveis
