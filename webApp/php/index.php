@@ -12,6 +12,7 @@ $data_nascimento
 $data_criacao
 $usuario
 $senha
+$altura
 */
 
 

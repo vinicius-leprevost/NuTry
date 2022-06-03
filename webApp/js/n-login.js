@@ -23,12 +23,13 @@ $(document).ready(function(){
         dataNascimento=$("#nascimento").val();
         senha=$("#senha").val();
         confSenha=$("#confSenha").val();
+        altura=$("#altura").val();
 
         if(primeiroNome == "" || ultimoNome == "" || email == "" || celular == "" || 
-            cpf == "" || dataNascimento == "" || senha == "" || confSenha == ""){
+            cpf == "" || dataNascimento == "" || senha == "" || confSenha == "" ||altura == ""){
                 window.alert("Preencha todos os campos");
         } else if(senha == confSenha){
-            fLocalCadastrar(primeiroNome,ultimoNome,email,celular,cpf,dataNascimento,senha);
+            fLocalCadastrar(primeiroNome,ultimoNome,email,celular,cpf,dataNascimento,senha,altura);
             if(fLocalCadastrar){
                 $('#modalCadastro').modal('hide');
             } 
@@ -70,7 +71,7 @@ function fLocalFiliar(){
 function fLocalHelp(){
 
 }
-function fLocalCadastrar(primeiroNome,ultimoNome,email,celular,cpf,dataNascimento,senha){
+function fLocalCadastrar(primeiroNome,ultimoNome,email,celular,cpf,dataNascimento,senha,altura){
     $.ajax({
        data:{
             ajax_pNome: primeiroNome,
@@ -80,6 +81,7 @@ function fLocalCadastrar(primeiroNome,ultimoNome,email,celular,cpf,dataNasciment
             ajax_cpf : cpf,
             ajax_dataNascimento : dataNascimento,
             ajax_senha : senha,
+            ajax_altura : altura,
        },
        type:"POST",
        url:"php/cadastroUsuario.php",

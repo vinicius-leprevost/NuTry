@@ -32,7 +32,7 @@ Contas ->
         $data_criacao
         $usuario
         $senha
-
+        $altura
 Administradores ->
     Referência ->
         $ID

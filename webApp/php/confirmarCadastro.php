@@ -8,6 +8,7 @@ $dataNascimento = "03/06/2000";
 $uid = $_GET['usr'];
 $pNome = $_GET['n'];
 $uNome = $_GET['s'];
+$altura = $_GET
 
 if(!empty($uid)){
     $dados_cadastro = [ // CADASTRO PARA REALTIME
@@ -17,6 +18,7 @@ if(!empty($uid)){
         'Ultimo_Nome' => $uNome,
         'Display_Name' => $pNome." ".$uNome,
         'Perfil' => "Paciente",
+        'altura' => $altura,
     ];
     $verificacao = [
         'Verificado' => "1",
