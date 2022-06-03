@@ -1,21 +1,22 @@
 <?php
 include "firebaseConnector.php";
 
-$pNome = "Vinicius";
-$uNome = "Tomadon";
 $cpf = "001.002.003-04";
 $dataNascimento = "03/06/2000";
 
 
 $uid = $_GET['usr'];
+$pNome = $_GET['n'];
+$uNome = $_GET['s'];
 
-if(!empty($uid)){	
+if(!empty($uid)){
     $dados_cadastro = [ // CADASTRO PARA REALTIME
-        "Data_Nascimento" => $dataNascimento,
-        "Cpf" => $cpf,
+        'Data_Nascimento' => $dataNascimento,
+        'Cpf' => $cpf,
         'Primeiro_Nome' => $pNome,
         'Ultimo_Nome' => $uNome,
         'Display_Name' => $pNome." ".$uNome,
+        'Perfil' => "Paciente",
     ];
     $verificacao = [
         'Verificado' => "1",

@@ -13,7 +13,7 @@ $email = $_POST["ajax_email"];
 
 $propriedades_cadastro = [ // CADASTRO PADRÃO FIREBASE
   'email' => $email,
-  'password' => "khj43645pwd",
+  'password' => "123456",
   'displayName' => $nome." ".$sobrenome,
   'disabled' => false,
 ];
@@ -26,6 +26,8 @@ $dados_cadastro = [ // CADASTRO PARA REALTIME
   'Display_Name' => $pNome." ".$uNome,
 ];
 */
+
+//ADICIONA ATRIBUTOS EM PRÉ-CADASTRO
 $status = "0";
 $dados_cadastro = [
   "Verificado" => $status,
@@ -44,7 +46,7 @@ $updates = [
 $rcon->getReference()
     ->update($updates);
 
-$link='http://localhost/NuTry/webApp/php/confirmarCadastro.php?usr='.$uid;
+$link='http://localhost/NuTry/webApp/php/confirmarCadastro.php?usr='.$uid.'&n='.$nome.'&s='.$sobrenome;
 
 
 //  <<<<< DEFINIÇÕES DE EMAIL >>>>>

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    
+
     fLocalPrintCard();
 });
 
@@ -8,23 +8,29 @@ $(document).ready(function(){
 function fLocalPrintCard(){
     $.ajax({
         type: "GET",
-        url: "../php/php-ListFilmes.php",
+        url: "../php/printCard1.php",
         dataType: "json",
         error: function() {
             alert("Infelizmente o servidor não conseguiu computar os dados!");
         },
         success: function(retorno){
             setTimeout(function(){
-                var cards = retorno[0].card
                 
-                $asd = retorno[i].arquivoIMG;
+                var vPID = retorno[0].PID;
+                var vCarb = retorno[0].carb;
+                var vProt = retorno[0].prot;
 
-                $("#cardID").html(ID);
-                $("#cardPID").html(PID);
-                $("#cardTitulo").html(Tit);
-                $("#cardCarb").html(Carb);
-                $("#cardProt").html(Prot);
+                var conteudo = "";
+                conteudo += "<div class='card' style='width: 18rem;'>"
+                conteudo += "    <div class='card-body'>"
+                conteudo += "      <h5 class='card-title'>"+vPID+"</h5>"
+                conteudo += "       <p class='card-text'>"+vCarb+"</p>"
+                conteudo += "       <p class='card-text'>"+vProt+"</p>"
+                conteudo += "       <a href='#' class='btn btn-primary'>Detalhes</a>"
+                conteudo += "    </div>"
+                conteudo += "</div>"
 
+                $("#insertCard").html(conteudo);
 
             },500);
         }

@@ -27,6 +27,7 @@ $dados_cadastro = [ // CADASTRO PARA REALTIME
     'Primeiro_Nome' => $pNome,
     'Ultimo_Nome' => $uNome,
     'Display_Name' => $pNome." ".$uNome,
+    'Perfil' => "Nutricionista",
 ];
 
 // CADASTRO EM "AUTHENTICATION"
