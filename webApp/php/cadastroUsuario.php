@@ -11,6 +11,7 @@ $dataNascimento = $_POST["ajax_dataNascimento"];
 $pwd = $_POST["ajax_senha"];
 $altura = $_POST["ajax_altura"];
 $altura = $altura*100;
+$plano = $_POST["ajax_plano"];
 
 $propriedades_cadastro = [ // CADASTRO PADRÃO FIREBASE
     'email' => $email,
@@ -30,6 +31,7 @@ $dados_cadastro = [ // CADASTRO PARA REALTIME
     'Display_Name' => $pNome." ".$uNome,
     'Perfil' => "Nutricionista",
     'altura' => $altura,
+    'plano' => $plano,
 ];
 
 // CADASTRO EM "AUTHENTICATION"

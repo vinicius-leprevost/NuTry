@@ -13,6 +13,7 @@ $data_criacao
 $usuario
 $senha
 $altura
+$plano
 */
 
 
