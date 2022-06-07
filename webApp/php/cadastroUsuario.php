@@ -10,8 +10,7 @@ $cpf = $_POST["ajax_cpf"];
 $dataNascimento = $_POST["ajax_dataNascimento"];
 $pwd = $_POST["ajax_senha"];
 $altura = $_POST["ajax_altura"];
-
-
+$altura = $altura*100;
 
 $propriedades_cadastro = [ // CADASTRO PADRÃO FIREBASE
     'email' => $email,
