@@ -23,14 +23,16 @@ $(document).ready(function(){
         dataNascimento=$("#nascimento").val();
         senha=$("#senha").val();
         confSenha=$("#confSenha").val();
-        altura=$("#altura").val();
-        plano=$("#plano").val();
-        
-
+        altura=$("#altura").val();        
+        if ($('#plano').prop('checked')) {
+            var plano = true;
+        } else {
+            var plano = false;
+        };
 
 
         if(primeiroNome == "" || ultimoNome == "" || email == "" || celular == "" || 
-            cpf == "" || dataNascimento == "" || senha == "" || confSenha == "" ||altura == ""||plano == ""){
+            cpf == "" || dataNascimento == "" || senha == "" || confSenha == "" ||altura == ""){
                 window.alert("Preencha todos os campos");
         } else if(senha == confSenha){
             fLocalCadastrar(primeiroNome,ultimoNome,email,celular,cpf,dataNascimento,senha,altura,plano);

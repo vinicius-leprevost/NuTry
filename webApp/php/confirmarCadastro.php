@@ -19,7 +19,6 @@ if(!empty($uid)){
         'Display_Name' => $pNome." ".$uNome,
         'Perfil' => "Paciente",
         'altura' => $altura,
-        'Plano' => $plano,
     ];
     $verificacao = [
         'Verificado' => "1",
