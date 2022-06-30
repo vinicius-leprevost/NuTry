@@ -9,7 +9,6 @@ $celular = $_POST["ajax_celular"];
 $cpf = $_POST["ajax_cpf"];
 $dataNascimento = $_POST["ajax_dataNascimento"];
 $pwd = $_POST["ajax_senha"];
-$altura = $_POST["ajax_altura"]*100;
 $plano = $_POST["ajax_plano"];
 
 $propriedades_cadastro = [ // CADASTRO PADRÃO FIREBASE
@@ -29,7 +28,6 @@ $dados_cadastro = [ // CADASTRO PARA REALTIME
     'Ultimo_Nome' => $uNome,
     'Display_Name' => $pNome." ".$uNome,
     'Perfil' => "Nutricionista",
-    'altura' => $altura,
     'Tem_Plano' => $plano,
 ];
 

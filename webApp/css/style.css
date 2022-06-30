@@ -3778,10 +3778,11 @@ input[type="button"].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: #11101d;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem; }
+  border-radius: 0.25rem; 
+  align-items: center;}
   .card > hr {
     margin-right: 0;
     margin-left: 0; }
@@ -8168,7 +8169,7 @@ h1, h2, h3, h4, h5,
   line-height: 1.5;
   font-weight: 400;
   font-family: "Lato", Arial, sans-serif;
-  color: #000; }
+  color: #fff; }
 
 .bg-primary {
   background: #fbceb5 !important; }
@@ -8226,7 +8227,7 @@ h1, h2, h3, h4, h5,
   background: transparent;
   border: none;
   height: 50px;
-  color: #ffa5ff !important;
+  color: #fff !important;
   border: 1px solid traparent;
   background: rgba(255, 255, 255, 0.08);
   border-radius: 40px;

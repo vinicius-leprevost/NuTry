@@ -23,7 +23,6 @@ $(document).ready(function(){
         dataNascimento=$("#nascimento").val();
         senha=$("#senha").val();
         confSenha=$("#confSenha").val();
-        altura=$("#altura").val();        
         if ($('#plano').prop('checked')) {
             var plano = true;
         } else {
@@ -32,10 +31,10 @@ $(document).ready(function(){
 
 
         if(primeiroNome == "" || ultimoNome == "" || email == "" || celular == "" || 
-            cpf == "" || dataNascimento == "" || senha == "" || confSenha == "" ||altura == ""){
+            cpf == "" || dataNascimento == "" || senha == "" || confSenha == ""){
                 window.alert("Preencha todos os campos");
         } else if(senha == confSenha){
-            fLocalCadastrar(primeiroNome,ultimoNome,email,celular,cpf,dataNascimento,senha,altura,plano);
+            fLocalCadastrar(primeiroNome,ultimoNome,email,celular,cpf,dataNascimento,senha,plano);
             if(fLocalCadastrar){
                 $('#modalCadastro').modal('hide');
             } 
@@ -56,17 +55,18 @@ function fLocalEntrar(email, senha){
         type:"POST",
         dataType:"json",
         url:"php/loginUsuario.php",
-        error:function(){ 
-            alert("NÃO ESTÁ HAVENDO RETORNO DO PHP !!!");
-        }, 
+        error:function(retorno){ 
+            if(retorno['autenticado'] != true){
+                alert("Email ou senha inseridos estão incorretos, tente novamente!");
+            }else{
+                alert("NÃO ESTÁ HAVENDO RETORNO DO PHP !!!");
+            }
+        },
         success: function(retorno){
             console.log(retorno);
             if(retorno['autenticado']){
                 alert("USUÁRIO AUTENTICADO");
                 window.location.href="paginas/index.html";
-    
-            }else{            
-                alert("Aqui Email ou senha incorretos, tente novamente");
             }
         },
     });
@@ -77,7 +77,7 @@ function fLocalFiliar(){
 function fLocalHelp(){
 
 }
-function fLocalCadastrar(primeiroNome,ultimoNome,email,celular,cpf,dataNascimento,senha,altura,plano){
+function fLocalCadastrar(primeiroNome,ultimoNome,email,celular,cpf,dataNascimento,senha,plano){
     $.ajax({
        data:{
             ajax_pNome: primeiroNome,
@@ -87,7 +87,6 @@ function fLocalCadastrar(primeiroNome,ultimoNome,email,celular,cpf,dataNasciment
             ajax_cpf : cpf,
             ajax_dataNascimento : dataNascimento,
             ajax_senha : senha,
-            ajax_altura : altura,
             ajax_plano : plano,
        },
        type:"POST",
